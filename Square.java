@@ -21,6 +21,6 @@ public class Square extends Rectangle
      */
     public Square(Point center, int width, Color color, boolean filled)
     {
-        // TODO: implement this.
+    	super(center, width, width, color, filled);
     }
 }

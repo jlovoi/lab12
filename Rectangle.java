@@ -22,6 +22,12 @@ public class Rectangle extends Polygon
      */
     public Rectangle(Point center, int width, int height, Color color, boolean filled)
     {
-        // TODO: implement this.
+        super(color, filled);
+        location = new Point[4];
+        Point topLeft = new Point(center.x - (width/2), center.y - (height/2));
+        location[0] = topLeft;
+        location[1] = new Point(topLeft.x + width, topLeft.y);
+        location[3] = new Point(topLeft.x, topLeft.y + height);
+        location[2] = new Point(topLeft.x + width, topLeft.y + height);
     }
 }
